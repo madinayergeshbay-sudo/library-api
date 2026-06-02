@@ -1,70 +1,60 @@
-# 도서관 책 대여 관리 시스템
+# 📚 도서관 책 대여 관리 시스템
 
-FastAPI + SQLAlchemy + SQLite를 사용한 MVC 패턴 도서관 책 대여 관리 시스템입니다.
+## 프로젝트 소개
+
+FastAPI와 SQLite를 활용한 MVC 패턴 기반 도서관 도서 대여 관리 시스템입니다.
+
+## 사용 기술
+
+- Python
+- FastAPI
+- SQLAlchemy
+- SQLite
+- Pydantic
+- MVC Pattern
 
 ## 프로젝트 구조
 
-```text
-library_api_project/
-├── database.py
-├── models.py
-├── crud.py
-├── main.py
-├── requirements.txt
-└── README.md
-```
 
-## MVC 역할 분리
+## 주요 기능
 
-| 파일 | 역할 |
-|---|---|
-| database.py | DB 연결 및 세션 관리 |
-| models.py | DB 테이블 구조와 Pydantic 데이터 검증 |
-| crud.py | Create, Read, Update, Delete 로직 |
-| main.py | FastAPI 앱 실행 및 API 엔드포인트 |
+### 도서 등록
+POST /books/
 
-## 설치
+### 전체 도서 조회
+GET /books/
 
-```bash
-pip install -r requirements.txt
-```
+### 특정 도서 조회
+GET /books/{book_id}
 
-## 실행
+### 도서 수정
+PUT /books/{book_id}
 
-```bash
-uvicorn main:app --reload
-```
+### 도서 삭제
+DELETE /books/{book_id}
 
-## Swagger UI
+## API 테스트
 
-```text
+Swagger UI를 통해 API를 테스트할 수 있습니다.
+
 http://127.0.0.1:8000/docs
-```
 
-## API 엔드포인트
+## MVC 구조
 
-| Method | URL | 설명 |
-|---|---|---|
-| GET | / | 서버 상태 확인 |
-| POST | /books/ | 도서 등록 |
-| GET | /books/ | 전체 도서 조회 |
-| GET | /books/{book_id} | 특정 도서 조회 |
-| PUT | /books/{book_id} | 도서 정보 수정 |
-| DELETE | /books/{book_id} | 도서 삭제 |
+### Model
+models.py
 
-## POST 테스트 예시
+### Controller
+main.py
 
-```json
-{
-  "title": "데이터 분석 입문",
-  "author": "김민수",
-  "publisher": "경복출판사",
-  "year": 2024,
-  "status": "대여가능"
-}
-```
+### Database
+database.py
 
-## 설명
+### CRUD
+crud.py
 
-이 프로젝트는 도서관 책 대여 관리를 위한 FastAPI 백엔드 API입니다.
-SQLAlchemy로 SQLite 데이터베이스와 연결하고, Pydantic으로 입력 데이터를 검증합니다.
+## 개발자
+
+Madina
+
+경복대학교 빅데이터과
