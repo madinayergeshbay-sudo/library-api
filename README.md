@@ -1,60 +1,113 @@
-# 📚 도서관 책 대여 관리 시스템
+# 📚 Library Management System
 
-## 프로젝트 소개
+## 👩‍🎓 Student Information
 
-FastAPI와 SQLite를 활용한 MVC 패턴 기반 도서관 도서 대여 관리 시스템입니다.
+- Name: Madina Yergeshbay
+- University: Kyungbok University
+- Department: Big Data
+- Course: Application Development
+- Project: Library Book Rental Management System
 
-## 사용 기술
+---
 
-- Python
-- FastAPI
-- SQLAlchemy
-- SQLite
-- Pydantic
-- MVC Pattern
+## 📖 Project Overview
 
-## 프로젝트 구조
+This project is a Library Book Rental Management System developed using FastAPI, SQLAlchemy and SQLite.
 
+The system allows users to:
 
-## 주요 기능
+- Add new books
+- View all books
+- Search books by ID
+- Update book information
+- Delete books
 
-### 도서 등록
-POST /books/
+---
 
-### 전체 도서 조회
-GET /books/
+## 🛠 Technology Stack
 
-### 특정 도서 조회
-GET /books/{book_id}
+| Technology | Description |
+|------------|-------------|
+| Python | Programming Language |
+| FastAPI | Backend Framework |
+| SQLAlchemy | ORM |
+| SQLite | Database |
+| Pydantic | Data Validation |
 
-### 도서 수정
-PUT /books/{book_id}
+---
 
-### 도서 삭제
-DELETE /books/{book_id}
+## 📂 Project Structure
 
-## API 테스트
+```text
+library_api_project/
+│
+├── main.py
+├── models.py
+├── crud.py
+├── database.py
+├── requirements.txt
+├── README.md
+└── library.db
+```
 
-Swagger UI를 통해 API를 테스트할 수 있습니다.
+## 🚀 API Endpoints
 
+| Method | Endpoint | Description |
+|----------|----------|----------|
+| GET | / | Server Status |
+| POST | /books/ | Create Book |
+| GET | /books/ | Get All Books |
+| GET | /books/{book_id} | Get Book |
+| PUT | /books/{book_id} | Update Book |
+| DELETE | /books/{book_id} | Delete Book |
+
+---
+
+## 💾 Database
+
+SQLite database is used for storing book information.
+
+Book information includes:
+
+- Title
+- Author
+- Publisher
+- Year
+- Status
+
+---
+
+## 📷 Swagger UI
+
+After running the server:
+
+```bash
+uvicorn main:app --reload
+```
+
+Open:
+
+```text
 http://127.0.0.1:8000/docs
+```
 
-## MVC 구조
+---
 
-### Model
-models.py
+## ✅ Project Features
 
-### Controller
-main.py
+✔ FastAPI REST API
 
-### Database
-database.py
+✔ MVC Pattern
 
-### CRUD
-crud.py
+✔ CRUD Operations
 
-## 개발자
+✔ SQLite Database
 
-Madina
+✔ Swagger Documentation
 
-경복대학교 빅데이터과
+✔ GitHub Version Control
+
+---
+
+## 👏 Thank You
+Kyungbok University - Big Data Department
